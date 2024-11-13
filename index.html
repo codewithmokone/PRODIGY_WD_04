@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- External anks -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <script defer src="index.js"></script>
     <title>Simon Lephoto | Portfoao</title>
@@ -11,19 +14,35 @@
   <body>
     <div class="container">
       <header>
+        <!-- Nav section -->
         <div class="navbar-container">
             <div class="logo">
                 <a href="#home">Simon Lephoto</a>
             </div>
             <nav class="nav-menu">
-                <a>Home</a>
-                <a>About</a>
-                <a>Projects</a>
-                <a>Contact</a>
+                <a class="nav-link">Home</a>
+                <a class="nav-link">About</a>
+                <a class="nav-link">Projects</a>
+                <a class="nav-link">Contact</a>
             </nav>
         </div>
       </header>
-      <main></main>
+      <main>
+        <!-- Hero section -->
+        <div class="hero-section">
+            <div class="hero-left">
+                <p>Hey, I'm Simon Lephoto</p>
+                <h1>Frontend Developer</h1>
+                <div class="hero-buttons">
+                    <button class="contact-btn">Get in Touch</button>
+                    <button class="project-btn">Browse Projects</button>
+                </div>
+            </div>
+            <div class="hero-right">
+                <img class="hero-image" src="assets/images/hero-image.jpg" alt="hero image">
+            </div>
+        </div>
+      </main>
       <footer></footer>
     </div>
   </body>
