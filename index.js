@@ -12,6 +12,24 @@ links.forEach((link) => {
     // Remove the "active" class from all links
     links.forEach((item) => item.classList.remove("active"));
     link.classList.add("active");
+    mobileLinks.classList.add("hidden");
+    mobileMenuClose.classList.add("hidden");
+    console.log('?')
+  });
+});
+
+// Get all buttons with class="btn" inside the container
+const mlinks = mobileLinks.querySelectorAll(".nav-link");
+
+// Loop through the buttons and add the active class to the current/clicked button
+mlinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    // Remove the "active" class from all links
+    mlinks.forEach((item) => item.classList.remove("active"));
+    link.classList.add("active");
+    // mobileLinks.classList.add("hidden");
+    // mobileMenuClose.classList.add("hidden");
+    closeMobileMenu()
   });
 });
 
@@ -24,6 +42,7 @@ const showMobileMenu = () => {
 
 // Function for closing mobile menu
 const closeMobileMenu = () => {
+  console.log('link clicked!')
   mobileLinks.classList.add("hidden");
   mobileMenuClose.classList.add("hidden");
   mobileMenuOpen.classList.remove("hidden");

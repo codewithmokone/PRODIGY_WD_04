@@ -52,22 +52,22 @@ header {
 }
 
 .nav-link {
-    color: black;
+  color: black;
   font-weight: 600;
   text-decoration: none;
 }
 
 .nav-menu a:hover {
-    color: gray;
-    font-weight: 600;
-    border-bottom: 3px solid gray;
-    text-decoration: none;
+  color: gray;
+  font-weight: 600;
+  border-bottom: 3px solid gray;
+  text-decoration: none;
 }
 
-.nav-link.active{
-    color: gray;
-    font-weight: 600;
-    border-bottom: 3px solid gray;
+.nav-link.active {
+  color: gray;
+  font-weight: 600;
+  border-bottom: 3px solid gray;
 }
 
 /* Mobile navigation */
@@ -212,9 +212,9 @@ h1 {
 }
 
 .about-info {
-    display: flex;
-    flex-direction: column;
-    gap: 8px; 
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .content-right p {
@@ -240,64 +240,64 @@ h1 {
 }
 
 .skills {
-    width: 80%;
-    height: 300px;
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border: 1px solid red;
+  width: 80%;
+  height: 300px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid red;
 }
 
 .skill-group {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .skill-item {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .download-btn {
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 8px;
-    margin-top: 10px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 8px;
+  margin-top: 10px;
 }
 
 /* Contact Page */
 .contact-me {
-    width: 80%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 70px;
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
 }
 
 .contact-hr {
-    width: 75px;
-    height: 4px;
-    background-color: black;
-    margin-left: -94px;
-  }
+  width: 75px;
+  height: 4px;
+  background-color: black;
+  margin-left: -94px;
+}
 
-.contact-content{
+.contact-content {
   width: 100%;
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.contact-info{
+.contact-info {
   width: 50%;
 }
 
-.contact-form{
+.contact-form {
   width: 45%;
   height: 100%;
   display: flex;
@@ -315,13 +315,13 @@ form {
   gap: 6px;
 }
 
-.form-input{
+.form-input {
   padding: 8px;
   border: 1px solid black;
   /* border-radius: 5px; */
 }
 
-form button{
+form button {
   color: white;
   height: 30px;
   border: none;
@@ -344,32 +344,32 @@ form button{
   gap: 20px;
 }
 
-.address-item{
+.address-item {
   display: flex;
   gap: 18px;
 }
 
-.address-info li{
+.address-info li {
   display: flex;
   gap: 8px;
 }
 
-.address-item img{
+.address-item img {
   width: 40px;
   height: 40px;
 }
 
-.address-item p{
+.address-item p {
   font-size: 14px;
 }
 
-.map-container{
+.map-container {
   width: 80%;
 }
 
-.map-container img{
-    width: 100%;
-    height: 250px;
+.map-container img {
+  width: 100%;
+  height: 250px;
 }
 
 main {
@@ -426,13 +426,14 @@ footer {
 
 @media only screen and (max-width: 786px) {
   /* For mobile phones: */
+.container {
+  /* height: 100vh; */
+}
+
   header {
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     border-bottom: 1px solid gray;
   }
 
@@ -470,9 +471,18 @@ footer {
     background-color: grey;
   }
 
+  .nav-link.active {
+    color: white;
+    background-color: grey;
+    border-bottom: 1px solid black;
+  }
+
+  /* Hero Section */
   .hero-section {
     width: 90%;
-    height: 40%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
   }
 
   .hero-left {
@@ -508,24 +518,15 @@ footer {
 
   main {
     width: 100%;
-    height: 100vh;
   }
 
   /* About section */
   .about-me {
     width: 95%;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    gap: 70px;
-  }
-
-  .about-heading {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-top: 30px;
-    gap: 6px;
+    flex-direction: column;
   }
 
   .about-heading h1 {
@@ -577,10 +578,101 @@ footer {
     border-radius: 50%;
   }
 
-  footer {
-    width: 100%;
-    height: 200px;
+  /* Contact Page */
+  .contact-me {
+    width: 95%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 70px;
+  }
+
+  .contact-hr {
+    width: 75px;
+    height: 4px;
     background-color: black;
+    margin-left: -70px;
+  }
+
+  .contact-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contact-info {
+    width: 100%;
+  }
+
+  .contact-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+  }
+
+  form {
+    width: 95%;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 6px;
+  }
+
+  .form-input {
+    padding: 8px;
+    border: 1px solid black;
+    /* border-radius: 5px; */
+  }
+
+  form button {
+    color: white;
+    height: 30px;
+    border: none;
+    margin-top: 20px;
+    background-color: black;
+  }
+
+  .address-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+
+  .address-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .address-info li {
+    display: flex;
+    gap: 8px;
+  }
+
+  .address-item img {
+    width: 230x;
+    height: 30px;
+  }
+
+  .address-item h4{
+    font-size: 14px;
+  }
+
+  .address-item p {
+    font-size: 12px;
+  }
+
+  .map-container {
+    display: none;
   }
 
   /*  Footer section */
@@ -588,6 +680,7 @@ footer {
     width: 100%;
     height: 300px;
     display: flex;
+    margin-top: 100px;
     background-color: black;
   }
 
