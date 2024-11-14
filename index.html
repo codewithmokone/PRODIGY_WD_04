@@ -23,10 +23,10 @@
             <a href="#home">Simon Lephoto</a>
           </div>
           <nav class="nav-menu">
-            <a class="nav-link">Home</a>
-            <a class="nav-link" href="/about.html">About</a>
-            <a class="nav-link">Projects</a>
-            <a class="nav-link">Contact</a>
+            <a class="nav-link" href="#home">Home</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" href="#contact">Contact</a>
           </nav>
           <div class="ham-burger">
             <img
@@ -42,7 +42,7 @@
           </div>
           <div class="mobile-nav hidden">
             <a class="nav-link" href="#home">Home</a>
-            <a class="nav-link" href="/about.html">About</a>
+            <a class="nav-link" href="#about">About</a>
             <a class="nav-link" href="#projects">Projects</a>
             <a class="nav-link" href="#contact">Contact</a>
           </div>
@@ -50,7 +50,7 @@
       </header>
       <main>
         <!-- Hero section -->
-        <div class="hero-section">
+        <div class="hero-section" id="home">
           <div class="hero-left">
             <p>Hey, I'm Simon Lephoto</p>
             <h1>Frontend Developer</h1>
@@ -65,6 +65,102 @@
               src="assets/images/hero-image.jpg"
               alt="hero image"
             />
+          </div>
+        </div>
+        <!-- About section -->
+        <div class="about-me" id="about">
+          <div class="about-heading">
+            <h1>About Me</h1>
+            <div class="about-hr"></div>
+          </div>
+          <div class="about-content">
+            <div class="content-left">
+              <div class="border">
+                <img class="about-img" src="" alt="" />
+              </div>
+            </div>
+            <div class="content-right">
+              <div>
+                <h4>A Little About Myself</h4>
+              </div>
+              <div class="about-info">
+                <p>
+                  Hi, I'm Simon Lephoto, a creative Frontend Developer with a
+                  passion for turning ideas into dynamic and user-friendly web
+                  experiences. With a strong foundation in HTML, CSS, and
+                  JavaScript, I specialize in building responsive, accessible,
+                  and performant websites that prioritize user experience.
+                </p>
+
+                <p>
+                  I have hands-on experience with modern frontend frameworks
+                  like React and Vue.js, and I love translating design mockups
+                  into fully functional, interactive interfaces. My focus is
+                  always on creating clean, maintainable code and staying
+                  up-to-date with the latest industry trends and best practices.
+                </p>
+                <p>
+                  I thrive in collaborative environments and am always eager to
+                  tackle new challenges that push the boundaries of what the web
+                  can do. Feel free to check out my projects below or connect
+                  with me to chat about all things web development!
+                </p>
+              </div>
+              <div>
+                <button class="download-btn">DOWNLOAD CV</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Contact section -->
+        <div class="contact-me" id="contact">
+          <div class="about-heading">
+            <h1>Contact Me</h1>
+            <div class="contact-hr"></div>
+          </div>
+          <div class="contact-content">
+                <div class="address-container">
+                  <h2>Get In Touch</h2>
+                  <div class="address-info">
+                    <div class="address-item">
+                      <img src="/assets/icons/address-pin-location-svgrepo-com.png" alt="address icon">
+                      <div>
+                        <h4>Address</h4>
+                        <p>2377 Mashabela, Etwatwa</p>
+                      </div>
+                    </div>
+                    <div class="address-item">
+                      <img src="assets/icons/phone-svgrepo-com.png" alt="phone icon">
+                      <div>
+                        <h4>Contact</h4>
+                        <p>+27 71 313 2387</p>
+                      </div>
+                    </div>
+                    <div class="address-item">
+                      <img src="assets/icons/mail-svgrepo-com.png" alt="mail icon">
+                      <div>
+                        <h4>Mail</h4>
+                        <p>simonlephotojr@gmail.com</p>
+                      </div>
+                    </div>
+                    <li></li>
+                  </div>
+                </div>
+              <div class="contact-form">
+                <form  action="">
+                  <label for="name">Name:</label>
+                  <input type="text" class="form-input" id="name" name="name" required>
+                  <label for="contact">Contact:</label>
+                  <input type="text" class="form-input" name="contact" id="contact" required>
+                  <label for="">Message:</label>
+                  <textarea rows="5" class="form-input"></textarea required>
+                  <button type="submit">SEND</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="map-container">
+            <img src="assets/images/map.jpg" alt="" />
           </div>
         </div>
       </main>
@@ -82,8 +178,16 @@
             </nav>
           </div>
           <div class="footer-social">
-            <img class="social-icon" src="assets/icons/linkedin-round-svgrepo-com.png" alt="" />
-            <img class="social-icon" src="assets/icons/github-142-svgrepo-com.png" alt="" />
+            <img
+              class="social-icon"
+              src="assets/icons/linkedin-round-svgrepo-com.png"
+              alt=""
+            />
+            <img
+              class="social-icon"
+              src="assets/icons/github-142-svgrepo-com.png"
+              alt=""
+            />
           </div>
         </div>
       </footer>
