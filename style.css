@@ -130,17 +130,21 @@ h1 {
 .contact-btn {
   color: white;
   background-color: black;
-  padding: 10px;
+  padding: 6px 10px;
+  text-decoration: none;
   border: 1px solid black;
   border-radius: 10px;
   margin-top: 10px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .project-btn {
-  padding: 10px;
+  color: black;
+  padding: 6px 10px;
   border-radius: 10px;
   margin-top: 10px;
+  font-weight: 500;
+  text-decoration: none;
   background-color: white;
   border: 1px solid black;
 }
@@ -266,6 +270,39 @@ h1 {
   border-radius: 10px;
   padding: 8px;
   margin-top: 10px;
+}
+
+/* Project Section */
+.project-container{
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  border: 1px solid red;
+}
+
+.projects-hr {
+  width: 40px;
+  height: 4px;
+  background-color: black;
+  margin-left:2px;
+}
+
+.projects-group {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.project-item {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* Contact Page */
@@ -426,10 +463,6 @@ footer {
 
 @media only screen and (max-width: 786px) {
   /* For mobile phones: */
-.container {
-  /* height: 100vh; */
-}
-
   header {
     width: 100%;
     height: auto;
@@ -577,6 +610,27 @@ footer {
     background-color: green;
     border-radius: 50%;
   }
+
+  /* Project Section */
+.project-container{
+  width: 95%;
+  /* height: 100vh; */
+}
+
+.projects-group {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.project-item {
+  width: 360px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
   /* Contact Page */
   .contact-me {

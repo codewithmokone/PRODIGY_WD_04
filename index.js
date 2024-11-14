@@ -27,8 +27,6 @@ mlinks.forEach((link) => {
     // Remove the "active" class from all links
     mlinks.forEach((item) => item.classList.remove("active"));
     link.classList.add("active");
-    // mobileLinks.classList.add("hidden");
-    // mobileMenuClose.classList.add("hidden");
     closeMobileMenu()
   });
 });
@@ -42,7 +40,6 @@ const showMobileMenu = () => {
 
 // Function for closing mobile menu
 const closeMobileMenu = () => {
-  console.log('link clicked!')
   mobileLinks.classList.add("hidden");
   mobileMenuClose.classList.add("hidden");
   mobileMenuOpen.classList.remove("hidden");
