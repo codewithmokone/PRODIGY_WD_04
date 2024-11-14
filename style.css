@@ -14,9 +14,10 @@ body {
   align-items: center;
   justify-items: center;
   margin: auto;
+  color: #313638;
 }
 
-header {
+.main-header {
   width: 100%;
   height: auto;
   display: flex;
@@ -28,6 +29,7 @@ header {
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-bottom: 1px solid gray;
+  z-index: 1;
 }
 
 .navbar-container {
@@ -58,16 +60,16 @@ header {
 }
 
 .nav-menu a:hover {
-  color: gray;
+  color: #313638;
   font-weight: 600;
-  border-bottom: 3px solid gray;
+  border-bottom: 3px solid #313638;
   text-decoration: none;
 }
 
 .nav-link.active {
-  color: gray;
+  color: #313638;
   font-weight: 600;
-  border-bottom: 3px solid gray;
+  border-bottom: 3px solid #313638;
 }
 
 /* Mobile navigation */
@@ -125,14 +127,15 @@ h1 {
 .hero-buttons {
   display: flex;
   gap: 20px;
+  margin-top: 15px;
 }
 
 .contact-btn {
   color: white;
-  background-color: black;
+  background-color: #313638;
   padding: 6px 10px;
   text-decoration: none;
-  border: 1px solid black;
+  border: 1px solid #313638;
   border-radius: 10px;
   margin-top: 10px;
   font-weight: 500;
@@ -146,7 +149,7 @@ h1 {
   font-weight: 500;
   text-decoration: none;
   background-color: white;
-  border: 1px solid black;
+  border: 1px solid gray;
 }
 
 .hero-right {
@@ -155,7 +158,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid black;
+  border: 2px solid gray;
   border-radius: 50%;
 }
 
@@ -185,16 +188,12 @@ h1 {
   gap: 6px;
 }
 
-.about-heading h1 {
-  text-align: center;
-  font-size: 30px;
-}
 
 .about-hr {
-  width: 75px;
+  width: 60px;
   height: 4px;
-  background-color: black;
-  margin-left: -68px;
+  background-color: #313638;
+  margin-left: -60px;
 }
 
 .about-content {
@@ -231,16 +230,15 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
-  border-radius: 50%;
+  border: 12px solid #313638;
+  box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .border img {
-  width: 250px;
-  height: 250px;
-  border: 1px solid green;
+  width: 280px;
+  height: 280px;
+  position: inherit;
   background-color: green;
-  border-radius: 50%;
 }
 
 .skills {
@@ -280,14 +278,13 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 40px;
-  border: 1px solid red;
+  gap: 50px;
 }
 
 .projects-hr {
-  width: 40px;
+  width: 60px;
   height: 4px;
-  background-color: black;
+  background-color: #313638;
   margin-left:2px;
 }
 
@@ -297,12 +294,85 @@ h1 {
   justify-content: space-between;
 }
 
-.project-item {
-  width: 300px;
-  height: 300px;
+.card {
+  width: 350px;
+  height: 250px;
+  aspect-ratio: 1 /0.7;
   border-radius: 10px;
   background-color: white;
+  position: relative;
+  cursor: pointer;
+  /* z-index: -2; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.card:hover img {
+  filter: grayscale(1) brightness(0.4);
+}
+
+.card:hover::after{
+  opacity: 1;
+  inset: 20px;
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: fill;
+  object-position: 50% 90%;
+  transition: 0.5s ease-in-out;
+}
+
+.content {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.content h3,
+.content p,
+.card-btn {
+  opacity: 0;
+  transition: 0.4s 0.2s ease;
+}
+
+.content h3 {
+  margin-bottom: 12px;
+  scale: 0.7;
+}
+
+.content p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: white;
+  transform: translate(50%);
+}
+
+.card-btn{
+  margin-bottom: 12px;
+  scale: 0.7;
+}
+
+.card:hover .content h3{
+  scale: 1;
+  opacity: 1;
+}
+
+.card:hover .content h3{
+  scale: 1;
+  transform: translate(0);
 }
 
 /* Contact Page */
@@ -317,10 +387,10 @@ h1 {
 }
 
 .contact-hr {
-  width: 75px;
+  width: 60px;
   height: 4px;
-  background-color: black;
-  margin-left: -94px;
+  background-color: #313638;
+  margin-left: -80px;
 }
 
 .contact-content {
@@ -340,7 +410,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
+  border: 2px solid #313638;
 }
 
 form {
@@ -363,7 +433,7 @@ form button {
   height: 30px;
   border: none;
   margin-top: 20px;
-  background-color: black;
+  background-color: #313638;
 }
 
 .address-container {
@@ -461,15 +531,9 @@ footer {
   display: none;
 }
 
+/*  Mobile devices */
 @media only screen and (max-width: 786px) {
-  /* For mobile phones: */
-  header {
-    width: 100%;
-    height: auto;
-    display: flex;
-    border-bottom: 1px solid gray;
-  }
-
+  
   .navbar-container {
     width: 95%;
     display: flex;
@@ -513,7 +577,7 @@ footer {
   /* Hero Section */
   .hero-section {
     width: 90%;
-    height: 70vh;
+    height: 50vh;
     display: flex;
     align-items: center;
   }
@@ -551,6 +615,8 @@ footer {
 
   main {
     width: 100%;
+    display: flex;
+    gap: 50px;
   }
 
   /* About section */
@@ -560,6 +626,7 @@ footer {
     display: flex;
     align-items: center;
     flex-direction: column;
+
   }
 
   .about-heading h1 {
@@ -569,7 +636,7 @@ footer {
 
   .about-hr {
     width: 60px;
-    height: 4px;
+    /* height: 4px; */
     background-color: black;
     margin-left: -64px;
   }
@@ -614,10 +681,12 @@ footer {
   /* Project Section */
 .project-container{
   width: 95%;
-  /* height: 100vh; */
+  height: 100vh;
+  /* margin-top: 100px; */
 }
 
 .projects-group {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -626,10 +695,6 @@ footer {
 
 .project-item {
   width: 360px;
-  height: 300px;
-  border-radius: 10px;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
   /* Contact Page */
@@ -638,7 +703,7 @@ footer {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 150px;
     gap: 70px;
   }
 
@@ -761,5 +826,37 @@ footer {
   .social-icon {
     width: 25px;
     height: 25px;
+  }
+}
+
+/* Ultra wide screens */
+@media only screen and (min-width: 2560px){
+  .container{
+    width: 1300px;
+  }
+
+  .navbar-container{
+    width: 1300px;
+  }
+
+  .hero-section {
+    width: 1300px;
+  }
+
+  .about-me {
+    width: 1300px;
+  }
+
+  .project-container {
+    width: 1300px;
+  }
+
+  .contact-me {
+    width: 1300px;
+  }
+
+  .footer-container {
+    width: 1300px;
+    margin: auto;
   }
 }

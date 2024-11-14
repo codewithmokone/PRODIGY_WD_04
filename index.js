@@ -45,5 +45,22 @@ const closeMobileMenu = () => {
   mobileMenuOpen.classList.remove("hidden");
 };
 
+// Card navigation
+const firstCard = document.getElementById('card-one');
+const secondCard = document.getElementById('card-two');
+const thirdCard = document.getElementById('card-three');
+
+firstCard.addEventListener('click', () => {
+  window.location.href = "http://www.w3schools.com";
+})
+
+secondCard.addEventListener('click', () => {
+  window.location.href = "http://www.w3schools.com";
+})
+
+thirdCard.addEventListener('click', () => {
+  window.location.href = "http://www.w3schools.com";
+})
+
 mobileMenuOpen.addEventListener("click", showMobileMenu);
 mobileMenuClose.addEventListener("click", closeMobileMenu);

@@ -16,7 +16,7 @@
   </head>
   <body>
     <div class="container">
-      <header>
+      <header class="main-header">
         <!-- Nav section -->
         <div class="navbar-container">
           <div class="logo">
@@ -40,18 +40,18 @@
               alt="close icon"
             />
           </div>
-          <div class="mobile-nav hidden">
+          <nav class="mobile-nav hidden">
             <a class="nav-link" href="#home">Home</a>
             <a class="nav-link" href="#about">About</a>
             <a class="nav-link" href="#projects">Projects</a>
             <a class="nav-link" href="#contact">Contact</a>
             <a class="nav-link" href="#download">Download CV</a>
-          </div>
+          </nav>
         </div>
       </header>
       <main>
         <!-- Hero section -->
-        <div class="hero-section" id="home">
+        <section class="hero-section" id="home">
           <div class="hero-left">
             <p>Hey, I'm Simon Lephoto</p>
             <h1>Frontend Developer</h1>
@@ -67,19 +67,19 @@
               alt="hero image"
             />
           </div>
-        </div>
+        </section>
         <!-- About section -->
-        <div class="about-me" id="about">
-          <div class="about-heading">
-            <h1>About Me</h1>
+        <section class="about-me" id="about">
+          <header class="about-heading">
+            <h2>About Me</h2>
             <div class="about-hr"></div>
-          </div>
-          <div class="about-content">
-            <div class="content-left">
+          </header>
+          <article class="about-content">
+            <figure class="content-left">
               <div class="border">
-                <img class="about-img" src="" alt="" />
+                <img class="about-img" src="assets/images/my_image.jpg" alt="" />
               </div>
-            </div>
+            </figure>
             <div class="content-right">
               <div>
                 <h4>A Little About Myself</h4>
@@ -111,30 +111,51 @@
                 <button class="download-btn">DOWNLOAD CV</button>
               </div>
             </div>
-          </div>
-        </div>
+          </article>
+        </section>
         <!-- Projects Section -->
-        <div class="project-container" id="projects">
-          <div class="projects-header">
+        <section class="project-container" id="projects">
+          <header class="projects-header">
             <h2>Projects</h2>
             <div class="projects-hr"></div>
-          </div>
+          </header>
           <div class="projects-group">
-            <div class="project-item"></div>
-            <div class="project-item"></div>
-            <div class="project-item"></div>
+            <div class="card" id="card-one">
+              <figure>
+                <img src="assets/images/travel-web-site.PNG" alt="">
+              </figure>
+              <div class="content">
+                <h3>Travel Website</h3>
+              </div>
+            </div>
+            <div class="card" id="card-two">
+              <figure>
+                <img src="assets/images/stopwatch-web-site.PNG" alt="">
+              </figure>
+              <div class="content">
+                <h3>Stopwatch App</h3>
+              </div>
+            </div>
+            <div class="card" id="card-three">
+              <figure>
+                <img src="assets/images/stopwatch-web-site.PNG" alt="">
+              </figure>
+              <div class="content">
+                <h3>Stopwatch App</h3>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
         <!-- Contact section -->
-        <div class="contact-me" id="contact">
-          <div class="about-heading">
-            <h1>Contact Me</h1>
+        <section class="contact-me" id="contact">
+          <header class="about-heading">
+            <h2>Contact Me</h2>
             <div class="contact-hr"></div>
-          </div>
+          </header>
           <div class="contact-content">
                 <div class="address-container">
                   <h2>Get In Touch</h2>
-                  <div class="address-info">
+                  <address class="address-info">
                     <div class="address-item">
                       <img src="/assets/icons/address-pin-location-svgrepo-com.png" alt="address icon">
                       <div>
@@ -157,7 +178,7 @@
                       </div>
                     </div>
                     <li></li>
-                  </div>
+                  </address>
                 </div>
               <div class="contact-form">
                 <form  action="">
@@ -172,10 +193,10 @@
               </div>
             </div>
           </div>
-          <div class="map-container">
+          <!-- <div class="map-container">
             <img src="assets/images/map.jpg" alt="" />
-          </div>
-        </div>
+          </div> -->
+        </section>
       </main>
       <footer>
         <div class="footer-container">
