@@ -12,7 +12,31 @@
     />
     <link rel="stylesheet" href="style.css" />
     <script defer src="index.js"></script>
-    <title>Simon Lephoto | Portfoao</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+          // https://dashboard.emailjs.com/admin/account
+          emailjs.init({
+            publicKey: "UIEFYxSUvqD6lSTPa",
+          });
+      })();
+  </script>
+  <script type="text/javascript">
+      window.onload = function() {
+          document.getElementById('contact-form').addEventListener('submit', function(event) {
+              event.preventDefault();
+              // these IDs from the previous steps
+              emailjs.sendForm('service_j4v7fi5', 'template_hc9fmar', this)
+                  .then(() => {
+                      console.log('SUCCESS!');
+                  }, (error) => {
+                      console.log('FAILED...', error);
+                  });
+          });
+      }
+  </script>
+  <script src="https://kit.fontawesome.com/93dbfe216e.js" crossorigin="anonymous"></script>
+    <title>Simon Lephoto | Portfolio</title>
   </head>
   <body>
     <div class="container">
@@ -45,7 +69,7 @@
             <a class="nav-link" href="#about">About</a>
             <a class="nav-link" href="#projects">Projects</a>
             <a class="nav-link" href="#contact">Contact</a>
-            <a class="nav-link" href="#download">Download CV</a>
+            <a class="nav-link" href="assets/Resume - Simon Lephoto.pdf">Download CV</a>
           </nav>
         </div>
       </header>
@@ -108,7 +132,7 @@
                 </p>
               </div>
               <div>
-                <button class="download-btn">DOWNLOAD CV</button>
+                <a class="download-btn" href="assets/Resume - Simon Lephoto.pdf">DOWNLOAD CV</a>
               </div>
             </div>
           </article>
@@ -181,21 +205,18 @@
                   </address>
                 </div>
               <div class="contact-form">
-                <form  action="">
-                  <label for="name">Name:</label>
-                  <input type="text" class="form-input" id="name" name="name" required>
-                  <label for="contact">Contact:</label>
-                  <input type="text" class="form-input" name="contact" id="contact" required>
-                  <label for="">Message:</label>
-                  <textarea rows="5" class="form-input"></textarea required>
-                  <button type="submit">SEND</button>
+                <form  id="contact-form">
+                  <label for="user_name">Name:</label>
+                  <input type="text" class="form-input" id="user_name" name="user_name" required>
+                  <label for="user_email">Email:</label>
+                  <input type="text" class="form-input" name="user_email" id="user_email" required>
+                  <label for="message">Message:</label>
+                  <textarea rows="5" class="form-input" id="message" name="message"></textarea required>
+                  <button type="submit" class="submit" id="submit">SEND</button>
                 </form>
               </div>
             </div>
           </div>
-          <!-- <div class="map-container">
-            <img src="assets/images/map.jpg" alt="" />
-          </div> -->
         </section>
       </main>
       <footer>
@@ -212,16 +233,12 @@
             </nav>
           </div>
           <div class="footer-social">
-            <img
-              class="social-icon"
-              src="assets/icons/linkedin-round-svgrepo-com.png"
-              alt=""
-            />
-            <img
-              class="social-icon"
-              src="assets/icons/github-142-svgrepo-com.png"
-              alt=""
-            />
+            <a href="https://www.linkedin.com/in/simon-lephoto/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/codewithmokone" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
           </div>
         </div>
       </footer>
