@@ -477,7 +477,12 @@ form button {
 
 .address-item {
   display: flex;
+  align-items: center;
   gap: 18px;
+}
+
+.address-item i{
+  font-size: 35px;
 }
 
 .address-info li {
