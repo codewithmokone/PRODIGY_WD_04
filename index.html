@@ -13,29 +13,7 @@
     <link rel="stylesheet" href="style.css" />
     <script defer src="index.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-      (function() {
-          // https://dashboard.emailjs.com/admin/account
-          emailjs.init({
-            publicKey: "UIEFYxSUvqD6lSTPa",
-          });
-      })();
-  </script>
-  <script type="text/javascript">
-      window.onload = function() {
-          document.getElementById('contact-form').addEventListener('submit', function(event) {
-              event.preventDefault();
-              // these IDs from the previous steps
-              emailjs.sendForm('service_j4v7fi5', 'template_hc9fmar', this)
-                  .then(() => {
-                      console.log('SUCCESS!');
-                  }, (error) => {
-                      console.log('FAILED...', error);
-                  });
-          });
-      }
-  </script>
-  <script src="https://kit.fontawesome.com/93dbfe216e.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/93dbfe216e.js" crossorigin="anonymous"></script>
     <title>Simon Lephoto | Portfolio</title>
   </head>
   <body>
@@ -132,7 +110,7 @@
                 </p>
               </div>
               <div>
-                <a class="download-btn" href="assets/Resume - Simon Lephoto.pdf">DOWNLOAD CV</a>
+                <a class="download-btn" href="assets/Resume - Simon Lephoto.pdf" download>DOWNLOAD CV</a>
               </div>
             </div>
           </article>
@@ -162,12 +140,24 @@
             </div>
             <div class="card" id="card-three">
               <figure>
-                <img src="assets/images/stopwatch-web-site.PNG" alt="">
+                <img src="assets/images/tictactoe.PNG" alt="">
               </figure>
               <div class="content">
-                <h3>Stopwatch App</h3>
+                <h3>Tic-Tac-Toe</h3>
               </div>
             </div>
+            <div class="card" id="card-three">
+              <figure>
+                <img src="assets/images/tictactoe.PNG" alt="">
+              </figure>
+              <div class="content">
+                <h3>Tic-Tac-Toe</h3>
+              </div>
+            </div>
+          </div>
+          <div>
+            <button class="showMoreBtn">More</button>
+            <button class="showLessBtn hidden">Less</button>
           </div>
         </section>
         <!-- Contact section -->
@@ -205,7 +195,7 @@
                   </address>
                 </div>
               <div class="contact-form">
-                <form  id="contact-form">
+                <form  id="contact-form" action=`${sendMail()}` >
                   <label for="user_name">Name:</label>
                   <input type="text" class="form-input" id="user_name" name="user_name" required>
                   <label for="user_email">Email:</label>
@@ -234,10 +224,10 @@
           </div>
           <div class="footer-social">
             <a href="https://www.linkedin.com/in/simon-lephoto/" target="_blank">
-              <i class="fa-brands fa-linkedin"></i>
+              <i class="fa-brands fa-linkedin social-icon"></i>
             </a>
             <a href="https://github.com/codewithmokone" target="_blank">
-              <i class="fa-brands fa-github"></i>
+              <i class="fa-brands fa-github social-icon"></i>
             </a>
           </div>
         </div>

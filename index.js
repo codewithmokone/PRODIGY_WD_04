@@ -35,7 +35,7 @@ mlinks.forEach((link) => {
     link.classList.add("active");
 
     // Close the mobile menu after clicking a link
-    closeMobileMenu()
+    closeMobileMenu();
   });
 });
 
@@ -64,47 +64,125 @@ const closeMobileMenu = () => {
 };
 
 // Selecting card elements for navigation
-const firstCard = document.getElementById('card-one');
-const secondCard = document.getElementById('card-two');
-const thirdCard = document.getElementById('card-three');
+const firstCard = document.getElementById("card-one");
+const secondCard = document.getElementById("card-two");
+const thirdCard = document.getElementById("card-three");
 
 // Redirect to a URL when clicking on the first card
-firstCard.addEventListener('click', () => {
-  window.location.href = "http://www.w3schools.com";
-})
+firstCard.addEventListener("click", () => {
+  window.location.href = "https://fabulous-kangaroo-951360.netlify.app";
+});
 
 // Redirect to a URL when clicking on the second card
-secondCard.addEventListener('click', () => {
+secondCard.addEventListener("click", () => {
   window.location.href = "http://www.w3schools.com";
-})
+});
 
 // Redirect to a URL when clicking on the third card
-thirdCard.addEventListener('click', () => {
+thirdCard.addEventListener("click", () => {
   window.location.href = "http://www.w3schools.com";
-})
+});
 
 // Scroll animation effect: select all elements with the class "animation"
-const the_animation = document.querySelectorAll('.animation');
+const the_animation = document.querySelectorAll(".animation");
 
 // Create an IntersectionObserver to add/remove animation classes based on visibility
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      // Add the "scroll-animation" class when the element is visible
-      entry.target.classList.add('scroll-animation');
-    }else{
-      // Remove the "scroll-animation" class when the element is not visible
-      entry.target.classList.remove('scroll-animation');
-    }
-  })
-},{threshold: 0.5}); // Trigger when 50% of the element is visible
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Add the "scroll-animation" class when the element is visible
+        entry.target.classList.add("scroll-animation");
+      } else {
+        // Remove the "scroll-animation" class when the element is not visible
+        entry.target.classList.remove("scroll-animation");
+      }
+    });
+  },
+  { threshold: 0.5 }
+); // Trigger when 50% of the element is visible
 
 // Observe each element with the animation class
-for (let i = 0; i < the_animation.length; i++){
+for (let i = 0; i < the_animation.length; i++) {
   const elements = the_animation[i];
 
   observer.observe(elements);
 }
+
+// Function for sending email using email js'
+(function () {
+  // https://dashboard.emailjs.com/admin/account
+  emailjs.init({
+    publicKey: "UIEFYxSUvqD6lSTPa",
+  });
+})();
+
+window.onload = function () {
+  document
+    .getElementById("contact-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      // these IDs from the previous steps
+      emailjs.sendForm("service_j4v7fi5", "template_hc9fmar", this).then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error);
+        }
+      );
+    });
+};
+
+
+// Variables for the projects card section
+const cardContainer = document.querySelector(".projects-group");
+const cards = document.querySelectorAll(".card");
+const showMoreButton = document.querySelector(".showMoreBtn");
+const showLessButton = document.querySelector(".showLessBtn");
+
+cardContainer.innerHTML = "";
+
+[0, 1, 2].forEach((index) => {
+  if (cards[index]) {
+    cardContainer.appendChild(cards[index]).cloneNode(true);
+  }
+});
+
+// Function to show more cards
+const showMoreCards = () => {
+
+  console.log("Show more button clicked.");
+
+  [0,1,2,3].forEach((index) => {
+    if (cards[index]) {
+      cardContainer.appendChild(cards[index]).cloneNode(true);
+    }
+  });
+  
+  showMoreButton.classList.add('hidden');
+  showLessButton.classList.remove('hidden')
+  
+};
+
+//Function to show less cards
+const showLessCards = () => {
+
+  cardContainer.innerHTML = "";
+
+  [0, 1, 2].forEach((index) => {
+    if (cards[index]) {
+      cardContainer.appendChild(cards[index]).cloneNode(true);
+    }
+  });
+
+  showMoreButton.classList.remove('hidden');
+  showLessButton.classList.add('hidden')
+}
+
+// Event listener to "Show more" button
+showMoreButton.addEventListener("click", showMoreCards);
+showLessButton.addEventListener("click", showLessCards);
 
 // Add event listeners for opening and closing the mobile menu
 mobileMenuOpen.addEventListener("click", showMobileMenu);

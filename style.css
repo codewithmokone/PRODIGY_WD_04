@@ -300,8 +300,12 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 100px;
+  gap: 80px;
   margin-left: -100px;
+}
+
+.projects-header {
+  margin-top: 60px;
 }
 
 .projects-hr {
@@ -312,9 +316,11 @@ h1 {
 }
 
 .projects-group {
+  width: 90%;
   display: flex;
-  gap: 30px;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  /* justify-content: space-between; */
 }
 
 .card {
@@ -376,27 +382,40 @@ h1 {
   scale: 0.7;
 }
 
-.content p {
-  font-size: 14px;
-  line-height: 1.5;
-  color: white;
-  transform: translate(50%);
-}
-
-.card-btn{
-  margin-bottom: 12px;
+.content button{
+  /* margin-bottom: 10px; */
   scale: 0.7;
 }
 
-.card:hover .content h3{
+.card:hover .content h3 {
   scale: 1;
   opacity: 1;
 }
 
-.card:hover .content h3{
+.card:hover .content h3 {
   scale: 1;
   transform: translate(0);
 }
+
+.card:hover .content button{
+  scale: 1;
+  opacity: 1;
+}
+
+.card:hover .content button{
+  scale: 1;
+  transform: translate(0);
+}
+
+.showMoreBtn,.showLessBtn{
+  color: black;
+  padding: 4px 34px;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 
 /* Contact Page */
 .contact-me {
@@ -813,8 +832,7 @@ footer {
   }
 
   .social-icon {
-    width: 25px;
-    height: 25px;
+    font-size: 20px;
   }
 }
 
