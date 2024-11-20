@@ -700,8 +700,10 @@ footer {
 
   /* Project Section */
 .projects-group {
-  height: 100vh;
+  /* height: 100vh; */
   flex-direction: column;
+  flex-wrap: nowrap;
+  margin-left: -40px;
   gap: 30px;
 }
 

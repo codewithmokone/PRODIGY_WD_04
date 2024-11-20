@@ -63,6 +63,12 @@ const closeMobileMenu = () => {
   mobileMenuOpen.classList.remove("hidden");
 };
 
+// Add event listeners for opening the mobile menu
+mobileMenuOpen.addEventListener("click", showMobileMenu);
+
+// Add event listeners for closing the mobile menu
+mobileMenuClose.addEventListener("click", closeMobileMenu);
+
 // Selecting card elements for navigation
 const firstCard = document.getElementById("card-one");
 const secondCard = document.getElementById("card-two");
@@ -99,7 +105,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.5 }
+  { threshold: 0.4 }
 ); // Trigger when 50% of the element is visible
 
 // Observe each element with the animation class
@@ -134,8 +140,7 @@ window.onload = function () {
     });
 };
 
-
-// Variables for the projects card section
+// Variables for the projects section DOM elements
 const cardContainer = document.querySelector(".projects-group");
 const cards = document.querySelectorAll(".card");
 const showMoreButton = document.querySelector(".showMoreBtn");
@@ -151,24 +156,21 @@ cardContainer.innerHTML = "";
 
 // Function to show more cards
 const showMoreCards = () => {
-
   console.log("Show more button clicked.");
 
-  [0,1,2,3].forEach((index) => {
+  [0, 1, 2, 3].forEach((index) => {
     if (cards[index]) {
       cardContainer.appendChild(cards[index]).cloneNode(true);
     }
   });
-  
-  showMoreButton.classList.add('hidden');
-  showLessButton.classList.remove('hidden')
-  
+
+  showMoreButton.classList.add("hidden");
+  showLessButton.classList.remove("hidden");
 };
 
 //Function to show less cards
 const showLessCards = () => {
-
-  cardContainer.innerHTML = "";
+  cardContainer.innerHTML = ""; // clear the card container
 
   [0, 1, 2].forEach((index) => {
     if (cards[index]) {
@@ -176,14 +178,15 @@ const showLessCards = () => {
     }
   });
 
-  showMoreButton.classList.remove('hidden');
-  showLessButton.classList.add('hidden')
-}
+  // Show the show more button
+  showMoreButton.classList.remove("hidden");
 
-// Event listener to "Show more" button
+  // Hide the show less button
+  showLessButton.classList.add("hidden");
+};
+
+// Add event listener to "Show more" button
 showMoreButton.addEventListener("click", showMoreCards);
-showLessButton.addEventListener("click", showLessCards);
 
-// Add event listeners for opening and closing the mobile menu
-mobileMenuOpen.addEventListener("click", showMobileMenu);
-mobileMenuClose.addEventListener("click", closeMobileMenu);
+// Add event listener to "Show less" button
+showLessButton.addEventListener("click", showLessCards);
