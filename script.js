@@ -129,6 +129,9 @@ for (let i = 0; i < the_animation.length; i++) {
   });
 })();
 
+const notification = document.querySelector(".notification");
+const notificationBtn = document.querySelector("#notificationBtn");
+
 window.onload = function () {
   document
     .getElementById("contact-form")
@@ -138,6 +141,10 @@ window.onload = function () {
       emailjs.sendForm("service_j4v7fi5", "template_hc9fmar", this).then(
         () => {
           console.log("SUCCESS!");
+          notification.classList.remove("hidden");
+          document.getElementById('user_name').value = '';
+          document.getElementById('user_email').value = '';
+          document.getElementById('message').value = '';
         },
         (error) => {
           console.log("FAILED...", error);
@@ -196,3 +203,8 @@ showMoreButton.addEventListener("click", showMoreCards);
 
 // Add event listener to "Show less" button
 showLessButton.addEventListener("click", showLessCards);
+
+// Button to close notification
+notificationBtn.addEventListener("click", ()=>{
+  notification.classList.add('hidden');
+})
