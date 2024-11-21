@@ -73,6 +73,7 @@ mobileMenuClose.addEventListener("click", closeMobileMenu);
 const firstCard = document.getElementById("card-one");
 const secondCard = document.getElementById("card-two");
 const thirdCard = document.getElementById("card-three");
+const forthCard = document.getElementById("card-four");
 
 // Redirect to a URL when clicking on the first card
 firstCard.addEventListener("click", () => {
@@ -81,12 +82,17 @@ firstCard.addEventListener("click", () => {
 
 // Redirect to a URL when clicking on the second card
 secondCard.addEventListener("click", () => {
-  window.location.href = "http://www.w3schools.com";
+  window.location.href = "https://fantastic-cranachan-03ec39.netlify.app";
 });
 
 // Redirect to a URL when clicking on the third card
 thirdCard.addEventListener("click", () => {
-  window.location.href = "http://www.w3schools.com";
+  window.location.href = "https://starlit-horse-2a9c98.netlify.app";
+});
+
+// Redirect to a URL when clicking on the first card
+forthCard.addEventListener("click", () => {
+  window.location.href = "https://imaginative-donut-911ecd.netlify.app";
 });
 
 // Scroll animation effect: select all elements with the class "animation"
@@ -165,7 +171,7 @@ const showMoreCards = () => {
   });
 
   showMoreButton.classList.add("hidden");
-  showLessButton.classList.remove("hidden");
+  // showLessButton.classList.remove("hidden");
 };
 
 //Function to show less cards

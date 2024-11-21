@@ -31,7 +31,7 @@ body {
 .scroll-animation {
   opacity: 1;
   transform: translateX(50px);
-  margin-left:-100px;
+  margin-left: -100px;
 }
 
 .main-header {
@@ -194,7 +194,7 @@ h1 {
   align-items: center;
   justify-content: center;
   gap: 70px;
-  margin-left:-100px;
+  margin-left: -100px;
 }
 
 .about-heading {
@@ -205,7 +205,6 @@ h1 {
   margin-top: 50px;
   gap: 6px;
 }
-
 
 .about-hr {
   width: 60px;
@@ -236,6 +235,10 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.aboutButton{
+  margin-top: 10px;
 }
 
 .content-right p {
@@ -293,7 +296,7 @@ h1 {
 }
 
 /* Project Section */
-.project-container{
+.project-container {
   width: 90%;
   height: 100vh;
   display: flex;
@@ -312,7 +315,7 @@ h1 {
   width: 60px;
   height: 4px;
   background-color: #313638;
-  margin-left:2px;
+  margin-left: 2px;
 }
 
 .projects-group {
@@ -335,7 +338,7 @@ h1 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.card::after{
+.card::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -347,7 +350,7 @@ h1 {
   filter: grayscale(1) brightness(0.4);
 }
 
-.card:hover::after{
+.card:hover::after {
   opacity: 1;
   inset: 20px;
 }
@@ -366,7 +369,7 @@ h1 {
   top: 50%;
   left: 50%;
   color: white;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   text-align: center;
 }
 
@@ -383,7 +386,8 @@ h1 {
   opacity: 1;
 }
 
-.showMoreBtn,.showLessBtn{
+.showMoreBtn,
+.showLessBtn {
   color: black;
   padding: 4px 34px;
   border: 1px solid black;
@@ -391,7 +395,6 @@ h1 {
   text-decoration: none;
   cursor: pointer;
 }
-
 
 /* Contact Page */
 .contact-me {
@@ -402,7 +405,7 @@ h1 {
   align-items: center;
   justify-content: center;
   gap: 70px;
-  margin-left:-100px;
+  margin-left: -100px;
 }
 
 .contact-hr {
@@ -476,7 +479,7 @@ form button {
   gap: 18px;
 }
 
-.address-item i{
+.address-item i {
   font-size: 35px;
 }
 
@@ -547,7 +550,7 @@ footer {
   gap: 20px;
 }
 
-.footer-social a{
+.footer-social a {
   color: white;
   text-decoration: none;
 }
@@ -647,7 +650,6 @@ footer {
     display: flex;
     align-items: center;
     flex-direction: column;
-
   }
 
   .about-heading h1 {
@@ -675,13 +677,13 @@ footer {
   }
 
   /* Project Section */
-.projects-group {
-  /* height: 100vh; */
-  flex-direction: column;
-  flex-wrap: nowrap;
-  margin-left: -40px;
-  gap: 30px;
-}
+  .projects-group {
+    /* height: 100vh; */
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-left: -40px;
+    gap: 30px;
+  }
 
   /* Contact Page */
   .contact-me {
@@ -768,7 +770,7 @@ footer {
     height: 30px;
   }
 
-  .address-item h4{
+  .address-item h4 {
     font-size: 14px;
   }
 
@@ -815,12 +817,12 @@ footer {
 }
 
 /* Ultra wide screens */
-@media only screen and (min-width: 2560px){
-  .container{
+@media only screen and (min-width: 2560px) {
+  .container {
     width: 1300px;
   }
 
-  .navbar-container{
+  .navbar-container {
     width: 1300px;
   }
 
