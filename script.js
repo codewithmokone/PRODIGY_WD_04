@@ -70,29 +70,41 @@ mobileMenuOpen.addEventListener("click", showMobileMenu);
 mobileMenuClose.addEventListener("click", closeMobileMenu);
 
 // Selecting card elements for navigation
-const firstCard = document.getElementById("card-one");
-const secondCard = document.getElementById("card-two");
-const thirdCard = document.getElementById("card-three");
-const forthCard = document.getElementById("card-four");
+const cardOne = document.getElementById("card-one");
+const cardTwo = document.getElementById("card-two");
+const cardThree = document.getElementById("card-three");
+const cardFour = document.getElementById("card-four");
+const cardFive = document.getElementById("card-five");
+const cardSix = document.getElementById("card-six");
 
 // Redirect to a URL when clicking on the first card
-firstCard.addEventListener("click", () => {
+cardOne.addEventListener("click", () => {
   window.location.href = "https://fabulous-kangaroo-951360.netlify.app";
 });
 
 // Redirect to a URL when clicking on the second card
-secondCard.addEventListener("click", () => {
+cardTwo.addEventListener("click", () => {
   window.location.href = "https://fantastic-cranachan-03ec39.netlify.app";
 });
 
 // Redirect to a URL when clicking on the third card
-thirdCard.addEventListener("click", () => {
+cardThree.addEventListener("click", () => {
   window.location.href = "https://starlit-horse-2a9c98.netlify.app";
 });
 
-// Redirect to a URL when clicking on the first card
-forthCard.addEventListener("click", () => {
+// Redirect to a URL when clicking on the fourth card
+cardFour.addEventListener("click", () => {
   window.location.href = "https://imaginative-donut-911ecd.netlify.app";
+});
+
+// Redirect to a URL when clicking on the firth card
+cardFive.addEventListener("click", () => {
+  window.location.href = "https://dashing-khapse-b761ad.netlify.app";
+});
+
+// Redirect to a URL when clicking on the firth card
+cardSix.addEventListener("click", () => {
+  window.location.href = "https://graceful-starburst-86e805.netlify.app";
 });
 
 // Scroll animation effect: select all elements with the class "animation"
@@ -171,7 +183,7 @@ cardContainer.innerHTML = "";
 const showMoreCards = () => {
   console.log("Show more button clicked.");
 
-  [0, 1, 2, 3].forEach((index) => {
+  [0, 1, 2, 3, 4,5].forEach((index) => {
     if (cards[index]) {
       cardContainer.appendChild(cards[index]).cloneNode(true);
     }

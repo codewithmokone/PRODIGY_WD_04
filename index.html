@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- External anks -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
-    >
-    <link rel="stylesheet" href="style.css">
+    />
+    <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script
@@ -32,18 +32,21 @@
             <a class="nav-link" href="#about">About</a>
             <a class="nav-link" href="#projects">Projects</a>
             <a class="nav-link" href="#contact">Contact</a>
+            <a class="nav-link" href="assets/Resume_Simon_Lephoto.pdf"
+              ><i class="fa-solid fa-download"></i> CV</a
+            >
           </nav>
           <div class="ham-burger">
             <img
               class="ham-burger-icon"
               src="assets/icons/hamburger-menu-svgrepo-com.png"
               alt="menu icon"
-            >
+            />
             <img
               class="close-icon hidden"
               src="assets/icons//close-svgrepo-com.png"
               alt="close icon"
-            >
+            />
           </div>
           <nav class="mobile-nav hidden">
             <a class="nav-link" href="#home">Home</a>
@@ -72,7 +75,7 @@
               class="hero-image"
               src="assets/images/hero-image.jpg"
               alt="hero image"
-            >
+            />
           </div>
         </section>
         <!-- About section -->
@@ -88,7 +91,7 @@
                   class="about-img"
                   src="assets/images/my_image.jpg"
                   alt=""
-                >
+                />
               </div>
             </figure>
             <div class="content-right">
@@ -106,7 +109,7 @@
 
                 <p>
                   I have hands-on experience with modern frontend frameworks
-                  like React and Vue.js, and I love translating design mockups
+                  like React, and I love translating design mockups
                   into fully functional, interactive interfaces. My focus is
                   always on creating clean, maintainable code and staying
                   up-to-date with the latest industry trends and best practices.
@@ -118,13 +121,17 @@
                   with me to chat about all things web development!
                 </p>
               </div>
-              <div class="aboutButton">
-                <a
-                  class="download-btn"
-                  href="assets/Resume_Simon_Lephoto.pdf"
-                  download
-                  >DOWNLOAD CV</a
-                >
+              <div class="skillsContainer">
+                <h4>Skills:</h4>
+                <ul>
+                  <li><i class="fa-brands fa-html5"></i></li>
+                  <li><i class="fa-brands fa-css3-alt"></i></li>
+                  <li><i class="fa-brands fa-js"></i></li>
+                  <li><i class="fa-brands fa-react"></i></li>
+                  <li><i class="fa-brands fa-node-js"></i></li>
+                  <li><i class="fa-brands fa-figma"></i></li>
+                  <li><i class="fa-brands fa-github"></i></li>
+                </ul>
               </div>
             </div>
           </article>
@@ -138,7 +145,7 @@
           <div class="projects-group">
             <div class="card" id="card-one">
               <figure>
-                <img src="assets/images/travel-web-site.PNG" alt="" >
+                <img src="assets/images/travel-web-site.PNG" alt="" />
               </figure>
               <div class="content">
                 <h3>Travel Website</h3>
@@ -146,7 +153,7 @@
             </div>
             <div class="card" id="card-two">
               <figure>
-                <img src="assets/images/stopwatch-web-site.PNG" alt="" >
+                <img src="assets/images/stopwatch-web-site.PNG" alt="" />
               </figure>
               <div class="content">
                 <h3>Stopwatch App</h3>
@@ -154,7 +161,7 @@
             </div>
             <div class="card" id="card-three">
               <figure>
-                <img src="assets/images/tictactoe.PNG" alt="" >
+                <img src="assets/images/tictactoe.PNG" alt="" />
               </figure>
               <div class="content">
                 <h3>Tic-Tac-Toe</h3>
@@ -162,10 +169,26 @@
             </div>
             <div class="card" id="card-four">
               <figure>
-                <img src="assets/images/weather-web-site.PNG" alt="" >
+                <img src="assets/images/weather-web-site.PNG" alt="" />
               </figure>
               <div class="content">
                 <h3>Weather App</h3>
+              </div>
+            </div>
+            <div class="card" id="card-five">
+              <figure>
+                <img src="assets/images/hotel.PNG" alt="" />
+              </figure>
+              <div class="content">
+                <h3>Hotel App</h3>
+              </div>
+            </div>
+            <div class="card" id="card-six">
+              <figure>
+                <img src="assets/images/todolist.PNG" alt="" />
+              </figure>
+              <div class="content">
+                <h3>Todo List App</h3>
               </div>
             </div>
           </div>
@@ -216,7 +239,7 @@
                   id="user_name"
                   name="user_name"
                   required
-                >
+                />
                 <label for="user_email">Email:</label>
                 <input
                   type="text"
@@ -224,7 +247,7 @@
                   name="user_email"
                   id="user_email"
                   required
-                >
+                />
                 <label for="message">Message:</label>
                 <textarea
                   rows="5"
@@ -239,7 +262,9 @@
             <div class="notification hidden">
               <i class="fa-solid fa-check"></i>
               <p>Email sent.</p>
-              <button id="notificationBtn"><i class="fa-solid fa-xmark"></i></button>
+              <button id="notificationBtn">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
             </div>
           </div>
         </section>
